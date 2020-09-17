@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="m-2">
       {/* HEADER */}
-      <div className="flex justify-between">
+      <div className="lg:flex justify-between">
         <h1 className="text-3xl text-teal-700 m-2">Algorithm Sorter</h1>
         {/* MENU */}
         <Menu />

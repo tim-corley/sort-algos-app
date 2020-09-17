@@ -10,7 +10,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="lg:flex mx-8">
+    <div className="flex flex-wrap lg:mx-8">
       <Button
         changed={selectionHandler}
         id="01"
