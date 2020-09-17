@@ -14,7 +14,10 @@ const Table = ({ data }) => {
     if (keys) {
       return keys.map((key) => {
         return (
-          <th className="text-xs" key={key}>
+          <th
+            className="bg-gray-800 border border-gray-700 text-white text-xs m-4 p-2"
+            key={key}
+          >
             {key.toUpperCase()}
           </th>
         );
@@ -22,9 +25,13 @@ const Table = ({ data }) => {
     }
   };
 
-  const RenderRow = (props) => {
-    return props.keys.map((key) => {
-      return <td key={uuid()}>{props.tableData[key]}</td>;
+  const RenderRow = ({ keys, tableData }) => {
+    return keys.map((key) => {
+      return (
+        <td key={uuid()} className="py-2">
+          {tableData[key]}
+        </td>
+      );
     });
   };
 
@@ -33,7 +40,7 @@ const Table = ({ data }) => {
     let keys = getKeys();
     return rows.map((row) => {
       return (
-        <tr key={uuid()}>
+        <tr key={uuid()} className="border-dotted border-b-2 border-gray-200">
           <RenderRow tableData={row} keys={keys} />
         </tr>
       );
