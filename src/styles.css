@@ -5,3 +5,39 @@
 @tailwind utilities;
 
 /* Custom css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 768px;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.flexbox .sortwell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  background-color: gray;
+  padding: 15px;
+}
+
+.flexbox .sortwell .card {
+  padding: 15px 25px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
