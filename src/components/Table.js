@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Header from "./Header";
 import uuid from "react-uuid";
 import "../styles.css";
 
@@ -13,14 +14,7 @@ const Table = ({ data }) => {
     let keys = getKeys();
     if (keys) {
       return keys.map((key) => {
-        return (
-          <th
-            className="bg-gray-800 border border-gray-700 text-white text-xs m-4 p-2"
-            key={key}
-          >
-            {key.toUpperCase()}
-          </th>
-        );
+        return <Header key={uuid()} label={key} />;
       });
     }
   };
