@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import TableHeaderBlock from "./TableHeaderBlock";
 import uuid from "react-uuid";
 import "../styles.css";
 
@@ -14,7 +14,7 @@ const Table = ({ data }) => {
     let keys = getKeys();
     if (keys) {
       return keys.map((key) => {
-        return <Header key={uuid()} label={key} />;
+        return <TableHeaderBlock key={uuid()} label={key} />;
       });
     }
   };
@@ -42,14 +42,14 @@ const Table = ({ data }) => {
   };
 
   return (
-    <>
+    <div className="max-h-screen p-2 m-2 border-2 rounded border-gray-800 overflow-scroll shadow-lg lg:w-9/12 lg:m-auto lg:mb-6">
       <table className="table-auto">
         <thead>
           <tr>{getHeader()}</tr>
         </thead>
         <tbody>{getRowsData()}</tbody>
       </table>
-    </>
+    </div>
   );
 };
 

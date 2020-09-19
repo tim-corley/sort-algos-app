@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 
 const Menu = () => {
-  const [selection, setSelection] = useState("None");
+  const [selection, setSelection] = useState("Regular Sort");
 
   const selectionHandler = (event) => {
     setSelection(event.target.value);
@@ -46,16 +46,9 @@ const Menu = () => {
         label="Quartile"
         value="Quartile Sort"
       />
-      <Button
-        changed={selectionHandler}
-        id="06"
-        isSelected={selection === "None"}
-        label="None"
-        value="None"
-      />
       <button
         onClick={selectionHandler}
-        value="None"
+        value="Regular Sort"
         className="bg-white hover:bg-teal-100 text-gray-800 font-semibold m-4 py-2 px-4 border border-gray-400 rounded shadow"
       >
         Reset

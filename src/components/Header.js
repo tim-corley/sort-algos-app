@@ -1,10 +1,15 @@
 import React from "react";
+import Menu from "./Menu";
 
-const Header = ({ label }) => {
+const Header = () => {
   return (
-    <th className="bg-gray-800 border border-gray-700 text-white text-xs m-4 p-2">
-      {label.toUpperCase()}
-    </th>
+    <>
+      <div className="lg:flex justify-between">
+        <h1 className="text-3xl text-teal-700 m-2">Algorithm Sorter</h1>
+        <Menu />
+      </div>
+      <div className="w-full border-t-2 border-gray-300 mb-6"></div>
+    </>
   );
 };
 
